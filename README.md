@@ -1,45 +1,28 @@
 # La Italiano
 
-Website for La Italiano, an Italian restaurant in Kuala Lumpur. HTML, CSS and vanilla JS — no frameworks.
+A restaurant website I built for fun. Wanted to see how far I could push a project with just HTML, CSS and vanilla JS — no frameworks, no libraries, nothing extra.
 
-**[Live Demo](https://laitaliano.com.my)**
+**[Live Demo](https://azatkabulov.github.io/la-italiano-restaurant)**
 
 ---
 
-## What's in it
+## What I built
 
-- Table reservation with a step-by-step floor plan (pick your table, fill details, done)
-- Menu with cart, promo code and checkout
+- Multi-step table reservation with an interactive SVG floor plan
+- Shopping cart with promo codes, delivery/pickup and checkout
+- Menu filtering, daily dish rotation, business lunch configurator
+- Gift card and catering flows
 - EN / RU language switch
-- Daily dish that rotates based on the day of the week
-- Business lunch builder, gift cards, catering enquiry
-- Works on mobile — bottom nav bar, touch-friendly modals
+- Fully responsive — custom mobile bottom nav and bottom-sheet modals
 
-## Stack
+## Tech
 
-HTML + CSS + JavaScript. That's it. No React, no bundler, no dependencies.
+Just HTML, CSS and JavaScript. Fonts from Google Fonts, photos from Unsplash.
 
-Fonts from Google Fonts (Cormorant Garamond + Jost). Photos from Unsplash.
-
-## Run locally
+## Run it
 
 ```bash
 git clone https://github.com/AzatKabulov/la-italiano-restaurant.git
 cd la-italiano-restaurant
 # open index.html in your browser
-```
-
-Or with a local server:
-
-```bash
-npx serve .
-```
-
-## Files
-
-```
-index.html    markup
-styles.css    all styling
-main.js       all logic and data
-favicon.svg
 ```
