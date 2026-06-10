@@ -1,85 +1,45 @@
-# La Italiano — Ristorante Italiano
+# La Italiano
 
-A portfolio-grade, fully responsive restaurant website for **La Italiano**, an authentic Italian restaurant in Kuala Lumpur. Built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no build tools.
+Website for La Italiano, an Italian restaurant in Kuala Lumpur. HTML, CSS and vanilla JS — no frameworks.
 
-**[Live Demo](https://laitaliano.com.my)** · Kuala Lumpur, Malaysia
-
----
-
-## Overview
-
-La Italiano is a single-page restaurant website featuring an interactive menu, table reservation with an animated SVG floor plan, a business lunch configurator, gift card purchasing, catering enquiry, and a full cart-to-checkout flow — all in under 1,000 lines of JavaScript.
+**[Live Demo](https://laitaliano.com.my)**
 
 ---
 
-## Features
+## What's in it
 
-- **Bilingual (EN / RU)** — full UI translation with a single `setLang()` call; all strings stored in a `T` dictionary
-- **Interactive SVG floor plan** — clickable table selection with real-time capacity validation and deposit logic
-- **Shopping cart** — add, remove, quantity control, promo code (`PASTA20`), delivery/pickup toggle
-- **Meal of the Day** — automatically rotates through 7 dishes based on the current day of the week
-- **Business Lunch configurator** — 3-step selector (main + drink + dessert) added as a single cart item
-- **Gift card flow** — denomination picker, recipient details, purchase confirmation
-- **Catering enquiry** — package selection + contact form
-- **Drink showcase** — tabbed feature section with fade transitions
-- **Review carousel** — auto-scrolling with manual arrow/dot navigation
-- **Animated stat counters** — triggered on scroll via IntersectionObserver
-- **3D card micro-tilt** — mouse-tracked perspective tilt on menu and offer cards (desktop)
-- **Focus trap & Escape key** — all modals trap keyboard focus and close on Escape (WCAG 2.1 AA)
-- **Parallax hero** — scroll-driven background offset, badge drift, and fade-out indicator
-- **Scroll reveal** — IntersectionObserver-driven fade-in animations
+- Table reservation with a step-by-step floor plan (pick your table, fill details, done)
+- Menu with cart, promo code and checkout
+- EN / RU language switch
+- Daily dish that rotates based on the day of the week
+- Business lunch builder, gift cards, catering enquiry
+- Works on mobile — bottom nav bar, touch-friendly modals
 
----
+## Stack
 
-## Tech Stack
+HTML + CSS + JavaScript. That's it. No React, no bundler, no dependencies.
 
-| Layer | Technology |
-|---|---|
-| Markup | HTML5, semantic elements, ARIA roles |
-| Styling | CSS3, Custom Properties (design tokens), CSS Grid & Flexbox |
-| Scripting | Vanilla JavaScript ES6+ (no framework) |
-| Fonts | Google Fonts — Cormorant Garamond + Jost |
-| Images | Unsplash (CDN) |
-| Maps | Google Maps Embed API |
+Fonts from Google Fonts (Cormorant Garamond + Jost). Photos from Unsplash.
 
----
-
-## Setup
-
-No build step. No dependencies. Just open the file.
+## Run locally
 
 ```bash
-git clone https://github.com/your-username/la-italiano.git
-cd la-italiano
-# Open index.html in your browser
-open index.html
+git clone https://github.com/AzatKabulov/la-italiano-restaurant.git
+cd la-italiano-restaurant
+# open index.html in your browser
 ```
 
-For live-reload during development, use any static server:
+Or with a local server:
 
 ```bash
 npx serve .
-# or
-python -m http.server 8000
 ```
 
----
-
-## Project Structure
+## Files
 
 ```
-la-italiano/
-├── index.html       # HTML — all markup, ARIA, SEO meta
-├── styles.css       # CSS — design tokens, layout, components, animations
-├── main.js          # JS — data, state, all interactivity
-├── favicon.svg      # SVG favicon (brand gold "L" on dark background)
-├── robots.txt       # Crawler rules + sitemap pointer
-├── sitemap.xml      # XML sitemap for search engines
-└── README.md        # This file
+index.html    markup
+styles.css    all styling
+main.js       all logic and data
+favicon.svg
 ```
-
----
-
-## License
-
-MIT — free to use, adapt, and build upon.
