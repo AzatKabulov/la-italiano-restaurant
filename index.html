@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Italiano — Ristorante Italiano · Kuala Lumpur</title>
+
+  <!-- SEO -->
+  <meta name="description" content="La Italiano — authentic Italian restaurant in Kuala Lumpur. Handmade pasta, wood-fired pizza and family recipes from Palermo since 1987.">
+  <link rel="canonical" href="https://laitaliano.com.my/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laitaliano.com.my/">
+  <meta property="og:title" content="La Italiano — Ristorante Italiano · Kuala Lumpur">
+  <meta property="og:description" content="Authentic Italian restaurant in KL. Handmade pasta, wood-fired pizza, family recipes from Palermo since 1987.">
+  <meta property="og:image" content="https://laitaliano.com.my/og-preview.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Italiano — Ristorante Italiano · Kuala Lumpur">
+  <meta name="twitter:description" content="Authentic Italian restaurant in KL. Handmade pasta, wood-fired pizza, family recipes from Palermo since 1987.">
+  <meta name="twitter:image" content="https://laitaliano.com.my/og-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span class="nav-logo-icon">✦</span> La <span>Italiano</span></a>
+  <ul class="nav-links">
+    <li><a href="#about" data-i18n="nav_about">About</a></li>
+    <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
+    <li><a href="#reservation" data-i18n="nav_reserve">Reserve</a></li>
+    <li><a href="#specials" data-i18n="nav_specials">Offers</a></li>
+    <li><a href="#reviews" data-i18n="nav_reviews">Reviews</a></li>
+    <li><a href="#footer" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+    <button class="nav-cart-btn" onclick="toggleCart()" aria-label="Open cart">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span data-i18n="nav_cart">Cart</span>
+      <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+    </button>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav-drawer" id="mobileNavDrawer">
+  <a class="mobile-nav-link" href="#about" onclick="closeMobileNav()" data-i18n="nav_about">About</a>
+  <a class="mobile-nav-link" href="#menu" onclick="closeMobileNav()" data-i18n="nav_menu">Menu</a>
+  <a class="mobile-nav-link mobile-nav-link--reserve" href="#reservation" onclick="closeMobileNav()" data-i18n="nav_reserve">Reserve</a>
+  <a class="mobile-nav-link" href="#specials" onclick="closeMobileNav()" data-i18n="nav_specials">Offers</a>
+  <a class="mobile-nav-link" href="#reviews" onclick="closeMobileNav()" data-i18n="nav_reviews">Reviews</a>
+  <a class="mobile-nav-link" href="#footer" onclick="closeMobileNav()" data-i18n="nav_contact">Contact</a>
+  <div class="mobile-nav-lang">
+    <button class="lang-btn active" onclick="setLang('en');closeMobileNav()">EN</button>
+    <button class="lang-btn" onclick="setLang('ru');closeMobileNav()">RU</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><div class="eyebrow-line"></div><span>Ristorante Italiano dal 1987</span></div>
+    <h1 class="hero-title">
+      <span data-i18n="hero_line1">Authentic</span>
+      <span class="line2">cucina</span>
+      <span data-i18n="hero_line3">italiana</span>
+    </h1>
+    <p class="hero-subtitle">— The taste of Italy, in the heart of Kuala Lumpur —</p>
+    <p class="hero-desc" data-i18n="hero_desc">Three generations of Tessore family recipes from Palermo. Hand-rolled pasta every morning, wood-fired pizza, the real taste of Sicily.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary" data-i18n="hero_cta1">View Menu</a>
+      <a href="#about" class="btn-outline" data-i18n="hero_cta2">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="hero-badge-ring"></div>
+    <div class="hero-badge-year">1987</div>
+    <div class="hero-badge-text" data-i18n="badge_text">Founded<br>in Palermo</div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scrollare</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip"><div class="marquee-track" id="marquee"></div></div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img-wrap reveal-left">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=85" alt="Elegant Italian restaurant dining room with candlelight and fine table settings" width="900" height="600" decoding="async">
+  </div>
+  <div class="about-content">
+    <div class="reveal">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">La Nostra Storia</span></div>
+      <h2 class="section-title" data-i18n="about_title">A family <em>tradition</em><br>since 1987</h2>
+      <blockquote class="about-quote" data-i18n="about_quote">"Good food is the foundation of genuine happiness." — Every dish at La Italiano is made as if your grandmother were watching.</blockquote>
+      <p class="section-desc" data-i18n="about_desc">Chef Marco Tessore brought his family's recipes from Palermo. We use no semi-finished products — every sheet of pasta dough is rolled by hand each morning. Our wood-fired oven was shipped directly from Sicily.</p>
+    </div>
+    <div class="about-stats reveal d2">
+      <div><span class="stat-num">37</span><span class="stat-label" data-i18n="stat1">Years of tradition</span></div>
+      <div><span class="stat-num">28+</span><span class="stat-label" data-i18n="stat2">Dishes on menu</span></div>
+      <div><span class="stat-num">★4.9</span><span class="stat-label" data-i18n="stat3">Guest rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="menu-header reveal">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">Il Nostro Menù</span></div>
+    <h2 class="section-title" data-i18n="menu_title">Choose your <em>dish</em></h2>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-cat="all" data-i18n="cat_all">All</button>
+      <button class="filter-btn" data-cat="pasta">Pasta</button>
+      <button class="filter-btn" data-cat="pizza">Pizza</button>
+      <button class="filter-btn" data-cat="risotto">Risotto</button>
+      <button class="filter-btn" data-cat="starters" data-i18n="cat_starters">Starters</button>
+      <button class="filter-btn" data-cat="desserts" data-i18n="cat_desserts">Desserts</button>
+      <button class="filter-btn" data-cat="drinks" data-i18n="cat_drinks">Drinks</button>
+    </div>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- RESERVATION SECTION -->
+<section class="res-section" id="reservation">
+  <div class="res-section-bg"></div>
+  <div class="res-section-inner">
+
+    <!-- Left: copy + quick-book widget -->
+    <div class="res-section-left reveal-left">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">Prenota il Tuo Tavolo</span></div>
+      <h2 class="section-title" data-i18n="res_section_title">Reserve your <em>table</em></h2>
+      <p class="section-desc" data-i18n="res_section_desc">Secure your seat at La Italiano. Choose your date, time and table — our refundable deposit holds it for you.</p>
+
+      <div class="res-quick-facts">
+        <div class="res-qf-item">
+          <span class="res-qf-icon">🕛</span>
+          <div>
+            <div class="res-qf-label" data-i18n="res_hours_label">Opening Hours</div>
+            <div class="res-qf-value">Daily 12:00 – 23:00</div>
+          </div>
+        </div>
+        <div class="res-qf-item">
+          <span class="res-qf-icon">👥</span>
+          <div>
+            <div class="res-qf-label" data-i18n="res_capacity_label">Capacity</div>
+            <div class="res-qf-value" data-i18n="res_capacity_value">Up to 10 guests per table</div>
+          </div>
+        </div>
+        <div class="res-qf-item">
+          <span class="res-qf-icon">💳</span>
+          <div>
+            <div class="res-qf-label" data-i18n="res_deposit_label">Deposit</div>
+            <div class="res-qf-value" data-i18n="res_deposit_value">RM 100 refundable</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick-book widget -->
+      <div class="res-quickbook">
+        <div class="res-qb-row">
+          <div class="res-qb-field">
+            <label class="res-qb-label" for="qbDate" data-i18n="res_date">Date</label>
+            <input class="res-qb-input" type="date" id="qbDate">
+          </div>
+          <div class="res-qb-field">
+            <label class="res-qb-label" for="qbTime" data-i18n="res_time">Time</label>
+            <select class="res-qb-select" id="qbTime">
+              <option value="">Select</option>
+              <option>12:00</option><option>12:30</option><option>13:00</option>
+              <option>13:30</option><option>14:00</option><option>18:00</option>
+              <option>18:30</option><option>19:00</option><option>19:30</option>
+              <option>20:00</option><option>20:30</option><option>21:00</option>
+              <option>21:30</option>
+            </select>
+          </div>
+          <div class="res-qb-field res-qb-field--guests">
+            <label class="res-qb-label" for="qbGuests" data-i18n="res_guests">Guests</label>
+            <select class="res-qb-select" id="qbGuests">
+              <option value="">—</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+              <option>9</option><option>10</option>
+            </select>
+          </div>
+        </div>
+        <button class="res-qb-btn" onclick="openReservationFromWidget()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-i18n="res_check_btn">Check Availability &amp; Book</span>
+        </button>
+        <p class="res-qb-note" data-i18n="res_qb_note">Instant confirmation · Refundable deposit · Free cancellation 24h before</p>
+      </div>
+    </div>
+
+    <!-- Right: floor plan preview -->
+    <div class="res-section-right reveal-right">
+      <div class="res-preview-card">
+        <div class="res-preview-header">
+          <span class="res-preview-label" data-i18n="res_preview_label">Restaurant Floor Plan</span>
+          <div class="res-preview-status">
+            <span class="res-status-dot res-status-dot--open"></span>
+            <span data-i18n="res_status_open">Open Today</span>
+          </div>
+        </div>
+        <svg class="res-preview-svg" viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Background -->
+          <rect width="700" height="460" fill="#080c1c"/>
+          <rect x="12" y="12" width="676" height="436" rx="3" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <!-- Window strip -->
+          <rect x="12" y="12" width="676" height="7" rx="2" fill="rgba(201,168,76,0.14)"/>
+          <text x="250" y="10" fill="rgba(201,168,76,0.28)" font-family="Jost,sans-serif" font-size="6" letter-spacing="4" text-anchor="middle" dominant-baseline="auto">W I N D O W S</text>
+          <!-- Zone dividers -->
+          <line x1="478" y1="20" x2="478" y2="440" stroke="rgba(201,168,76,0.1)" stroke-width="1" stroke-dasharray="5,4"/>
+          <line x1="480" y1="248" x2="688" y2="248" stroke="rgba(201,168,76,0.1)" stroke-width="1" stroke-dasharray="5,4"/>
+          <!-- Bar zone -->
+          <rect x="482" y="20" width="202" height="224" rx="1" fill="rgba(201,168,76,0.02)"/>
+          <path d="M498,140 L660,140 L660,195 Q660,210 642,210 L498,210 Z" fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.2)" stroke-width="0.8"/>
+          <text x="579" y="105" font-family="Cormorant Garamond,serif" font-size="11" font-style="italic" fill="rgba(201,168,76,0.4)" text-anchor="middle">Bar Lounge</text>
+          <!-- Private zone -->
+          <rect x="482" y="252" width="202" height="184" rx="1" fill="rgba(201,168,76,0.015)"/>
+          <text x="579" y="270" font-family="Cormorant Garamond,serif" font-size="10" font-style="italic" fill="rgba(201,168,76,0.38)" text-anchor="middle">Private Dining</text>
+          <!-- Kitchen zone -->
+          <rect x="20" y="326" width="116" height="110" rx="1" fill="rgba(220,80,60,0.03)" stroke="rgba(220,80,60,0.15)" stroke-width="0.8" stroke-dasharray="4,3"/>
+          <text x="78" y="375" font-family="Cormorant Garamond,serif" font-size="9" font-style="italic" fill="rgba(220,80,60,0.3)" text-anchor="middle">Cucina</text>
+          <!-- Entrance -->
+          <rect x="280" y="433" width="140" height="5" rx="2" fill="rgba(201,168,76,0.2)"/>
+          <text x="350" y="453" font-family="Cormorant Garamond,serif" font-size="8" font-style="italic" fill="rgba(201,168,76,0.45)" text-anchor="middle">✦ Entrance ✦</text>
+          <!-- Window tables (2-tops): cream=free, dim=taken -->
+          <circle cx="104" cy="100" r="16" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="176" cy="100" r="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" opacity="0.35"/>
+          <circle cx="248" cy="100" r="16" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="320" cy="100" r="16" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="392" cy="100" r="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" opacity="0.35"/>
+          <!-- Central tables (4-tops) -->
+          <circle cx="120" cy="208" r="22" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="225" cy="208" r="22" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="330" cy="208" r="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" opacity="0.35"/>
+          <circle cx="430" cy="208" r="22" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <!-- Lower tables (4-tops) -->
+          <circle cx="155" cy="334" r="24" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="290" cy="334" r="24" fill="rgba(220,210,190,0.07)" stroke="rgba(220,210,190,0.5)" stroke-width="1.2"/>
+          <circle cx="415" cy="334" r="24" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" opacity="0.35"/>
+          <!-- Private table: gold dashed -->
+          <circle cx="584" cy="345" r="28" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Call to action -->
+          <rect x="160" y="178" width="218" height="36" rx="4" fill="rgba(7,10,20,0.88)" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <text x="269" y="200" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="1.5" fill="rgba(201,168,76,0.9)" text-anchor="middle">VIEW FULL FLOOR PLAN</text>
+        </svg>
+        <div class="res-preview-legend">
+          <div class="res-pl-item"><span class="res-pl-dot res-pl-dot--free"></span><span data-i18n="leg_free">Available</span></div>
+          <div class="res-pl-item"><span class="res-pl-dot res-pl-dot--taken"></span><span data-i18n="leg_taken">Reserved</span></div>
+          <div class="res-pl-item"><span class="res-pl-dot res-pl-dot--private"></span><span>Private Suite</span></div>
+        </div>
+        <button class="res-preview-cta" onclick="openReservation()">
+          <span data-i18n="res_open_full">Open Full Floor Plan →</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DRINK SHOWCASE -->
+<section class="drink-showcase" id="drinks-feature">
+  <div class="drink-showcase-img">
+    <img id="drinkFeatImg" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=900&q=85" alt="Featured drink" width="900" height="600" decoding="async">
+  </div>
+  <div class="drink-showcase-content">
+    <div class="reveal">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">Le Nostre Bevande</span></div>
+      <h2 class="section-title" data-i18n="drinks_title">Cocktails, wines<br>&amp; <em>refreshments</em></h2>
+      <p class="section-desc" data-i18n="drinks_intro">From classic Tuscany wines to our signature Italian lemonade squeezed fresh every morning — every glass tells a story.</p>
+      <div class="drink-tabs" id="drinkTabs"></div>
+      <div class="drink-showcase-inner">
+        <div class="drink-showcase-name" id="drinkFeatName">Aperol Spritz</div>
+        <div class="drink-showcase-desc" id="drinkFeatDesc">The icon of Italian aperitivo hour. Refreshing and bittersweet.</div>
+        <div class="drink-showcase-price" id="drinkFeatPrice">RM 26</div>
+        <button class="btn-primary" onclick="addFeaturedDrink()" data-i18n="add_to_cart_btn">+ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALS -->
+<section class="specials reveal" id="specials">
+  <div class="specials-intro">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">Proposte Speciali</span></div>
+    <h2 class="section-title" data-i18n="specials_title">Curated <em>offers</em> &amp; experiences</h2>
+    <p class="section-desc" data-i18n="specials_desc">More than a meal — an experience. Reserve a moment, celebrate an occasion, or discover a seasonal secret from our chef.</p>
+  </div>
+  <div class="specials-grid">
+    <!-- Chef's Secret Dinner -->
+    <div class="offer-card">
+      <div class="offer-img">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Chef's Secret Dinner — intimate tasting menu table with fine wine" width="600" height="210" loading="lazy" decoding="async">
+        <span class="offer-badge" data-i18n="ob_limited">Limited seats</span>
+      </div>
+      <div class="offer-body">
+        <span class="offer-icon">🍽️</span>
+        <div class="offer-title" data-i18n="sp1_title">Chef's Secret Dinner</div>
+        <div class="offer-sub" data-i18n="sp1_sub">A 7-course tasting journey by Chef Marco every Fri &amp; Sat. Wine pairing available. Max 12 guests per night.</div>
+        <div class="offer-meta">
+          <div class="offer-price">RM 390 <small data-i18n="per_person">per person</small></div>
+          <button class="offer-cta" onclick="openReservation('chefs_dinner')" data-i18n="book_now">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business Lunch Set -->
+    <div class="offer-card">
+      <div class="offer-img">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80" alt="Business Lunch — bright lunch table setting" width="600" height="210" loading="lazy" decoding="async">
+        <span class="offer-badge gold" data-i18n="ob_daily">Daily</span>
+      </div>
+      <div class="offer-body">
+        <span class="offer-icon">☀️</span>
+        <div class="offer-title" data-i18n="sp2_title">Business Lunch Set</div>
+        <div class="offer-sub" data-i18n="sp2_sub">Starter + pasta or pizza + dessert + still water. Weekdays 12:00–15:00. Fast, generous, genuinely Italian.</div>
+        <div class="offer-meta">
+          <div class="offer-price">RM 68 <small data-i18n="for_two">for two</small></div>
+          <button class="offer-cta" onclick="openLunchModal()" data-i18n="order_now">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compleanno Package -->
+    <div class="offer-card">
+      <div class="offer-img">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80" alt="Birthday celebration with tiramisu cake" width="600" height="210" loading="lazy" decoding="async">
+        <span class="offer-badge gold" data-i18n="ob_gift">Gift</span>
+      </div>
+      <div class="offer-body">
+        <span class="offer-icon">🎂</span>
+        <div class="offer-title" data-i18n="sp3_title">Compleanno Package</div>
+        <div class="offer-sub" data-i18n="sp3_sub">It's your birthday? Celebrate with a complimentary slice of our signature Tiramisù cake — on the house. Simply present a valid ID to our staff and book a table in advance.</div>
+        <div class="offer-tc-box" data-i18n="sp3_tc">
+          <strong>T&amp;C</strong><br>
+          Valid on the birthday date only · Table booking required · Present original ID · One complimentary dessert per booking · Dine-in only
+        </div>
+        <div class="offer-meta offer-meta--spaced">
+          <div class="offer-price" data-i18n="complimentary">Free <small data-i18n="with_dinner">with dinner</small></div>
+          <button class="offer-cta" onclick="openReservation('birthday')" data-i18n="book_now">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meal of the Day -->
+    <div class="offer-card" id="motdCard">
+      <div class="offer-img">
+        <img id="motdImg" src="" alt="" width="600" height="210" decoding="async">
+        <span class="offer-badge" id="motdBadge">Today</span>
+      </div>
+      <div class="offer-body">
+        <span class="offer-icon">🍽️</span>
+        <div class="offer-title" id="motdTitle">Meal of the Day</div>
+        <div class="offer-sub" id="motdDesc"></div>
+        <div class="motd-drink-note">
+          🥂 <span id="motdDrink"></span>
+        </div>
+        <div class="offer-meta offer-meta--spaced">
+          <div class="offer-price" id="motdPrice">RM —</div>
+          <button class="offer-cta" id="motdCartBtn">+ Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header reveal">
+    <div class="reviews-header-left">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="section-label">Cosa Dicono i Nostri Ospiti</span></div>
+      <h2 class="section-title" data-i18n="reviews_title">What our <em>guests</em> say</h2>
+      <div class="reviews-overall">
+        <div class="reviews-big-rating">4.9</div>
+        <div class="reviews-rating-info">
+          <div class="reviews-stars-row">★★★★★</div>
+          <div class="reviews-count" data-i18n="reviews_count">Based on 340+ reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-nav">
+      <button class="rev-arrow" onclick="shiftReview(-1)" aria-label="Previous review">←</button>
+      <button class="rev-arrow" onclick="shiftReview(1)" aria-label="Next review">→</button>
+    </div>
+  </div>
+  <div class="reviews-carousel"><div class="reviews-track" id="reviewsTrack"></div></div>
+  <div class="reviews-dots" id="reviewsDots"></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="reveal">
+      <div class="footer-brand">La <em>Italiano</em></div>
+      <p class="footer-desc" data-i18n="footer_desc">Authentic Italian cuisine in the heart of Kuala Lumpur. Handmade pasta, wood-fired pizza and risotto using family recipes from Palermo.</p>
+      <p class="footer-italian">«Mangia bene, ridi spesso, ama molto»</p>
+    </div>
+    <div class="footer-col reveal d1">
+      <h4 data-i18n="footer_menu">Menu</h4>
+      <ul>
+        <li><a href="#menu">Pasta</a></li>
+        <li><a href="#pizza">Pizza</a></li>
+        <li><a href="#menu">Risotto</a></li>
+        <li><a href="#menu" data-i18n="cat_starters">Starters</a></li>
+        <li><a href="#menu" data-i18n="cat_desserts">Desserts</a></li>
+        <li><a href="#menu" data-i18n="cat_drinks">Drinks</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal d2">
+      <h4 data-i18n="footer_restaurant">Restaurant</h4>
+      <ul>
+        <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+        <li><a onclick="openReservation()" style="cursor:pointer" data-i18n="footer_reserve">Table Reservation</a></li>
+        <li><a href="#specials" data-i18n="nav_specials">Special Offers</a></li>
+        <li><a onclick="openGiftCards()" style="cursor:pointer" data-i18n="footer_gift">Gift Cards</a></li>
+        <li><a onclick="openCatering()" style="cursor:pointer">Catering</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal d3">
+      <h4 data-i18n="nav_contact">Contact</h4>
+      <ul>
+        <li><a href="#">168, Jalan Bukit Bintang,<br>55100 Kuala Lumpur, Malaysia</a></li>
+        <li><a href="tel:+60321234567">+60 3-2921 4567</a></li>
+        <li><a href="#" data-i18n="footer_hours">Daily 12:00 – 23:00</a></li>
+        <li><a href="mailto:hello@laitaliano.com.my">hello@laitaliano.com.my</a></li>
+        <li><a href="#">@laitaliano.kl</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Google Maps -->
+  <div class="footer-map-wrap">
+    <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8453219945!2d101.71148731474994!3d3.148959197848388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362abd08e38b%3A0x6e905da92e24a19f!2sPavilion%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="La Italiano — Pavilion KL"></iframe>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <span>© <span id="copyrightYear"></span> La Italiano. All rights reserved.</span>
+    <span><span data-i18n="footer_promo">Promo code</span> <strong class="footer-promo-code">PASTA20</strong> — 20% off</span>
+  </div>
+</footer>
+
+<!-- ─── RESERVATION OVERLAY ─────────────────────────────────── -->
+<div class="page-overlay" id="resOverlay" role="dialog" aria-modal="true" aria-labelledby="resModalTitle">
+  <div class="page-modal page-modal--reservation">
+
+    <!-- Sticky header with step progress -->
+    <div class="page-modal-head res-modal-head">
+      <div class="page-modal-head-row">
+        <h2 class="page-modal-title" id="resModalTitle" data-i18n="res_title">Reserve Your Table</h2>
+        <button class="modal-close-btn" onclick="closeOverlay('resOverlay')" aria-label="Close reservation modal">✕</button>
+      </div>
+      <div class="res-steps" id="resSteps" aria-label="Reservation steps">
+        <div class="res-step res-step--active" data-step="1">
+          <span class="res-step-num">1</span>
+          <span class="res-step-label" data-i18n="res_step1">Date &amp; Time</span>
+        </div>
+        <div class="res-step-line"></div>
+        <div class="res-step" data-step="2">
+          <span class="res-step-num">2</span>
+          <span class="res-step-label" data-i18n="res_step2">Choose Table</span>
+        </div>
+        <div class="res-step-line"></div>
+        <div class="res-step" data-step="3">
+          <span class="res-step-num">3</span>
+          <span class="res-step-label" data-i18n="res_step3">Your Details</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-modal-body" id="resBody">
+
+      <!-- ── STEP 1: Date / Time / Guests ───────────────────── -->
+      <div class="res-wizard-step" id="resStep1">
+        <div class="res-step-intro">
+          <p class="res-step-desc" data-i18n="res_step1_desc">When would you like to dine? We'll show you available tables for your date and party size.</p>
+        </div>
+        <div class="res-step1-grid">
+          <div class="res-form-group">
+            <label class="res-label" for="resDate" data-i18n="res_date">Date</label>
+            <input class="res-input res-input--large" type="date" id="resDate" min="">
+            <div id="resDateHint" style="font-size:0.7rem;color:var(--text-dim);margin-top:4px;letter-spacing:0.05em;"></div>
+          </div>
+          <div class="res-form-group">
+            <label class="res-label" for="resTime" data-i18n="res_time">Preferred Time</label>
+            <select class="res-select res-input--large" id="resTime">
+              <option value="">Select time</option>
+              <optgroup label="Lunch">
+                <option>12:00</option><option>12:30</option><option>13:00</option>
+                <option>13:30</option><option>14:00</option>
+              </optgroup>
+              <optgroup label="Dinner">
+                <option>18:00</option><option>18:30</option><option>19:00</option>
+                <option>19:30</option><option>20:00</option><option>20:30</option>
+                <option>21:00</option><option>21:30</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="res-form-group">
+            <label class="res-label" for="resGuests" data-i18n="res_guests">Guests</label>
+            <div class="res-guests-control">
+              <button class="res-guests-btn" id="guestsMinus" onclick="changeGuestsCount(-1)" aria-label="Decrease guests">−</button>
+              <span class="res-guests-num" id="guestsNum">2</span>
+              <button class="res-guests-btn" id="guestsPlus" onclick="changeGuestsCount(1)" aria-label="Increase guests">+</button>
+              <input type="hidden" id="resGuests" value="2">
+            </div>
+          </div>
+        </div>
+        <div class="res-occasion-row">
+          <div class="res-occasion-label" data-i18n="res_occasion_label">Occasion (optional)</div>
+          <div class="res-occasion-chips" id="resOccasionChips">
+            <button class="res-occasion-chip" data-occasion="">None</button>
+            <button class="res-occasion-chip" data-occasion="birthday">🎂 Birthday</button>
+            <button class="res-occasion-chip" data-occasion="anniversary">💍 Anniversary</button>
+            <button class="res-occasion-chip" data-occasion="business">💼 Business</button>
+            <button class="res-occasion-chip" data-occasion="date">🌹 Date Night</button>
+          </div>
+        </div>
+        <div class="res-step-nav">
+          <button class="res-next-btn" id="resStep1Next" onclick="resGoToStep(2)" disabled>
+            <span data-i18n="res_next_tables">See Available Tables</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 2: Floor Plan ───────────────────────────────── -->
+      <div class="res-wizard-step res-wizard-step--wide" id="resStep2" hidden>
+        <div class="res-step2-summary" id="resStep2Summary"></div>
+
+        <!-- Floor plan: full width -->
+        <div class="floor-plan-wrap">
+          <div class="floor-plan-top-bar">
+            <div class="floor-legend">
+              <div class="legend-item"><div class="legend-dot free"></div><span data-i18n="leg_free">Available</span></div>
+              <div class="legend-item"><div class="legend-dot taken"></div><span data-i18n="leg_taken">Reserved</span></div>
+              <div class="legend-item"><div class="legend-dot selected"></div><span data-i18n="leg_selected">Your choice</span></div>
+            </div>
+            <span class="floor-plan-hint">Click a table to select it</span>
+          </div>
+          <div class="floor-svg-wrap">
+                <svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" id="floorSvg" role="img" aria-label="Restaurant floor plan — click a table to select it">
+                <defs>
+                  <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0e1530"/>
+                    <stop offset="100%" stop-color="#080c1c"/>
+                  </linearGradient>
+                  <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(201,168,76,0.25)"/>
+                    <stop offset="100%" stop-color="rgba(201,168,76,0.05)"/>
+                  </linearGradient>
+                  <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="rgba(201,168,76,0.18)"/>
+                    <stop offset="100%" stop-color="rgba(201,168,76,0.04)"/>
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <pattern id="floorTile" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <rect width="30" height="30" fill="none"/>
+                    <line x1="0" y1="0" x2="30" y2="0" stroke="rgba(201,168,76,0.03)" stroke-width="0.5"/>
+                    <line x1="0" y1="0" x2="0" y2="30" stroke="rgba(201,168,76,0.03)" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+
+                <!-- Floor base -->
+                <rect x="0" y="0" width="700" height="460" fill="url(#floorGrad)"/>
+                <rect x="0" y="0" width="700" height="460" fill="url(#floorTile)"/>
+
+                <!-- Outer walls with depth -->
+                <rect x="12" y="12" width="676" height="436" rx="4" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="2"/>
+                <rect x="16" y="16" width="668" height="428" rx="3" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="1"/>
+
+                <!-- Corner ornaments -->
+                <g stroke="rgba(201,168,76,0.4)" stroke-width="1.5" fill="none">
+                  <path d="M12,36 L12,12 L36,12"/>
+                  <path d="M664,12 L688,12 L688,36"/>
+                  <path d="M688,424 L688,448 L664,448"/>
+                  <path d="M36,448 L12,448 L12,424"/>
+                </g>
+
+                <!-- Top wall windows -->
+                <rect x="12" y="12" width="676" height="8" rx="2" fill="url(#wallGrad)"/>
+                <g fill="rgba(201,168,76,0.07)" stroke="rgba(201,168,76,0.2)" stroke-width="0.8">
+                  <rect x="50" y="13" width="55" height="7" rx="1"/>
+                  <rect x="120" y="13" width="55" height="7" rx="1"/>
+                  <rect x="190" y="13" width="55" height="7" rx="1"/>
+                  <rect x="260" y="13" width="55" height="7" rx="1"/>
+                  <rect x="330" y="13" width="55" height="7" rx="1"/>
+                  <rect x="400" y="13" width="55" height="7" rx="1"/>
+                </g>
+                <!-- Window label -->
+                <text x="240" y="10" fill="rgba(201,168,76,0.3)" font-family="Jost,sans-serif" font-size="6" letter-spacing="4" text-anchor="middle" dominant-baseline="auto">W I N D O W S</text>
+
+                <!-- ── ZONE DIVIDERS ── -->
+                <!-- Vertical divider: main dining / right zones -->
+                <line x1="478" y1="20" x2="478" y2="440" stroke="rgba(201,168,76,0.12)" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+                <!-- Horizontal divider: bar / private -->
+                <line x1="480" y1="248" x2="688" y2="248" stroke="rgba(201,168,76,0.12)" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+                <!-- Kitchen divider (bottom-left) -->
+                <line x1="20" y1="322" x2="140" y2="322" stroke="rgba(220,80,60,0.2)" stroke-width="1.5" stroke-dasharray="5,3"/>
+                <line x1="140" y1="322" x2="140" y2="440" stroke="rgba(220,80,60,0.2)" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+                <!-- ── BAR ZONE (top-right) ── -->
+                <rect x="482" y="20" width="202" height="224" rx="2" fill="rgba(201,168,76,0.025)" stroke="none"/>
+                <!-- Bar counter arc shape -->
+                <path d="M498,145 L660,145 L660,205 Q660,225 640,225 L498,225 Z" fill="rgba(201,168,76,0.07)" stroke="rgba(201,168,76,0.25)" stroke-width="1.2"/>
+                <path d="M502,149 L656,149 L656,201 Q656,218 638,218 L502,218 Z" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.15)" stroke-width="0.8"/>
+                <!-- Bar stools (small circles along counter front) -->
+                <g fill="rgba(201,168,76,0.18)" stroke="rgba(201,168,76,0.35)" stroke-width="0.8">
+                  <circle cx="516" cy="140" r="5"/><circle cx="534" cy="140" r="5"/>
+                  <circle cx="552" cy="140" r="5"/><circle cx="570" cy="140" r="5"/>
+                  <circle cx="588" cy="140" r="5"/><circle cx="606" cy="140" r="5"/>
+                  <circle cx="624" cy="140" r="5"/><circle cx="642" cy="140" r="5"/>
+                </g>
+                <!-- Bar bottles silhouettes -->
+                <g fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.2)" stroke-width="0.6">
+                  <rect x="512" y="65" width="4" height="14" rx="1"/>
+                  <rect x="520" y="62" width="4" height="17" rx="1"/>
+                  <rect x="528" y="67" width="4" height="12" rx="1"/>
+                  <rect x="536" y="60" width="5" height="19" rx="1"/>
+                  <rect x="545" y="64" width="4" height="15" rx="1"/>
+                  <rect x="553" y="68" width="4" height="11" rx="1"/>
+                  <rect x="561" y="61" width="4" height="18" rx="1"/>
+                  <rect x="569" y="65" width="4" height="14" rx="1"/>
+                  <rect x="577" y="63" width="4" height="16" rx="1"/>
+                  <rect x="585" y="67" width="4" height="12" rx="1"/>
+                </g>
+                <!-- Bar shelf line -->
+                <line x1="508" y1="84" x2="596" y2="84" stroke="rgba(201,168,76,0.25)" stroke-width="1.2"/>
+                <!-- Wine glass icons -->
+                <g fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="0.9">
+                  <path d="M618,68 Q621,78 618,84 M621,68 Q618,78 621,84 M618,68 L621,68 M619.5,84 L619.5,92 M617,92 L622,92"/>
+                  <path d="M633,65 Q636,75 633,81 M636,65 Q633,75 636,81 M633,65 L636,65 M634.5,81 L634.5,89 M632,89 L637,89"/>
+                </g>
+                <!-- Bar zone label -->
+                <text x="579" y="110" fill="rgba(201,168,76,0.5)" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" text-anchor="middle" letter-spacing="0.5">Bar Lounge</text>
+                <line x1="545" y1="117" x2="573" y2="117" stroke="rgba(201,168,76,0.2)" stroke-width="0.7"/>
+                <text x="559" y="126" fill="rgba(201,168,76,0.25)" font-family="Jost,sans-serif" font-size="6.5" text-anchor="middle" letter-spacing="2">COCKTAILS · WINES</text>
+
+                <!-- ── PRIVATE DINING (bottom-right) ── -->
+                <rect x="482" y="252" width="202" height="184" rx="2" fill="rgba(201,168,76,0.018)" stroke="none"/>
+                <!-- Velvet rope suggestion -->
+                <path d="M482,260 Q535,256 535,260" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+                <!-- Sofa outline (U-shape) -->
+                <path d="M510,310 L510,380 Q510,395 520,395 L650,395 Q660,395 660,385 L660,310 Q660,300 650,300 L520,300 Q510,300 510,310 Z" fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.22)" stroke-width="1.2"/>
+                <path d="M522,316 L522,372 Q522,383 530,383 L648,383 Q655,383 655,375 L655,316 Q655,310 648,310 L530,310 Q522,310 522,316 Z" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.12)" stroke-width="0.8"/>
+                <!-- Center table in private room -->
+                <rect x="558" y="328" width="68" height="38" rx="4" fill="rgba(201,168,76,0.09)" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+                <rect x="562" y="332" width="60" height="30" rx="3" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.15)" stroke-width="0.7"/>
+                <!-- Candle on private table -->
+                <line x1="592" y1="345" x2="592" y2="337" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+                <path d="M590,337 Q592,333 594,337" fill="rgba(255,200,60,0.35)" stroke="rgba(255,200,60,0.5)" stroke-width="0.8"/>
+                <!-- Private zone label -->
+                <text x="583" y="275" fill="rgba(201,168,76,0.55)" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" text-anchor="middle">Private Dining</text>
+                <line x1="555" y1="281" x2="611" y2="281" stroke="rgba(201,168,76,0.18)" stroke-width="0.7"/>
+                <text x="583" y="291" fill="rgba(201,168,76,0.28)" font-family="Jost,sans-serif" font-size="6" text-anchor="middle" letter-spacing="2">SOFA SUITE · 10 GUESTS</text>
+
+                <!-- ── KITCHEN (bottom-left) ── -->
+                <rect x="20" y="326" width="116" height="110" rx="2" fill="rgba(220,80,60,0.03)" stroke="none"/>
+                <!-- Kitchen equipment silhouettes -->
+                <rect x="28" y="334" width="40" height="24" rx="2" fill="rgba(220,80,60,0.08)" stroke="rgba(220,80,60,0.2)" stroke-width="0.8"/>
+                <circle cx="36" cy="346" r="5" fill="none" stroke="rgba(220,80,60,0.25)" stroke-width="0.8"/>
+                <circle cx="48" cy="346" r="5" fill="none" stroke="rgba(220,80,60,0.25)" stroke-width="0.8"/>
+                <circle cx="60" cy="346" r="5" fill="none" stroke="rgba(220,80,60,0.25)" stroke-width="0.8"/>
+                <!-- Prep counter -->
+                <rect x="76" y="334" width="52" height="12" rx="1" fill="rgba(220,80,60,0.06)" stroke="rgba(220,80,60,0.18)" stroke-width="0.8"/>
+                <!-- Kitchen pass-through window -->
+                <rect x="132" y="360" width="8" height="28" rx="1" fill="rgba(201,168,76,0.15)" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+                <text x="78" y="370" fill="rgba(220,80,60,0.35)" font-family="Jost,sans-serif" font-size="8" text-anchor="middle" letter-spacing="1.5">CUCINA</text>
+                <text x="78" y="382" fill="rgba(220,80,60,0.2)" font-family="Jost,sans-serif" font-size="6" text-anchor="middle" letter-spacing="1">STAFF ONLY</text>
+
+                <!-- ── ENTRANCE (bottom-center) ── -->
+                <rect x="280" y="433" width="140" height="7" rx="3" fill="rgba(201,168,76,0.2)"/>
+                <path d="M280,440 L420,440" stroke="rgba(201,168,76,0.35)" stroke-width="2" stroke-dasharray="4,2"/>
+                <text x="350" y="455" fill="rgba(201,168,76,0.5)" font-family="Cormorant Garamond,serif" font-size="10" font-style="italic" text-anchor="middle" letter-spacing="1">✦  Entrance  ✦</text>
+                <!-- Door arcs -->
+                <path d="M280,440 Q280,420 300,420" fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+                <path d="M420,440 Q420,420 400,420" fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+
+                <!-- ── MAIN DINING HEADER ── -->
+                <text x="249" y="44" fill="rgba(201,168,76,0.45)" font-family="Cormorant Garamond,serif" font-size="14" font-style="italic" text-anchor="middle" filter="url(#glow)">✦  Main Dining Room  ✦</text>
+                <line x1="100" y1="50" x2="398" y2="50" stroke="rgba(201,168,76,0.12)" stroke-width="0.8"/>
+
+                <!-- ── DECORATIVE ELEMENTS ── -->
+                <!-- Hanging lights (chandelier) -->
+                <g stroke="rgba(201,168,76,0.18)" stroke-width="0.7" fill="none">
+                  <line x1="160" y1="20" x2="160" y2="68"/>
+                  <circle cx="160" cy="72" r="5" fill="rgba(255,220,100,0.12)" stroke="rgba(201,168,76,0.35)" stroke-width="0.8"/>
+                  <line x1="249" y1="20" x2="249" y2="64"/>
+                  <circle cx="249" cy="68" r="6" fill="rgba(255,220,100,0.12)" stroke="rgba(201,168,76,0.35)" stroke-width="0.8"/>
+                  <line x1="338" y1="20" x2="338" y2="68"/>
+                  <circle cx="338" cy="72" r="5" fill="rgba(255,220,100,0.12)" stroke="rgba(201,168,76,0.35)" stroke-width="0.8"/>
+                </g>
+                <!-- Left wall art/sconce -->
+                <g fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="0.8">
+                  <rect x="20" y="180" width="14" height="20" rx="1" fill="rgba(201,168,76,0.05)"/>
+                  <path d="M27,180 Q27,170 27,165 Q30,168 30,180" fill="rgba(201,168,76,0.06)"/>
+                  <rect x="20" y="290" width="14" height="20" rx="1" fill="rgba(201,168,76,0.05)"/>
+                </g>
+                <!-- Centerpiece plants/dividers (decorative) -->
+                <g fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.15)" stroke-width="0.7">
+                  <rect x="152" y="148" width="8" height="26" rx="1"/>
+                  <ellipse cx="156" cy="146" rx="10" ry="6"/>
+                  <rect x="280" y="148" width="8" height="26" rx="1"/>
+                  <ellipse cx="284" cy="146" rx="10" ry="6"/>
+                  <rect x="408" y="148" width="8" height="26" rx="1"/>
+                  <ellipse cx="412" cy="146" rx="10" ry="6"/>
+                </g>
+
+                <!-- Tables injected by JS -->
+              </svg>
+          </div><!-- /.floor-svg-wrap -->
+        </div><!-- /.floor-plan-wrap -->
+
+        <!-- Info row below floor plan -->
+        <div class="res-step2-bottom">
+          <div class="res-table-info" id="resTableInfo">
+            <div class="res-info-title" data-i18n="res_pick_table">← Select a table</div>
+            <div class="res-info-sub" data-i18n="res_pick_sub">Click any available table on the floor plan to see details.</div>
+          </div>
+          <div class="deposit-notice">
+            <div class="deposit-notice-title" data-i18n="deposit_title">Reservation Deposit</div>
+            <p data-i18n="deposit_desc">A refundable deposit secures your table. Deducted from your final bill.</p>
+            <span class="deposit-amount">RM 100.00</span>
+          </div>
+          <div class="res-step-nav res-step2-nav">
+            <button class="res-back-btn" onclick="resGoToStep(1)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span data-i18n="res_back">Back</span>
+            </button>
+            <button class="res-next-btn" id="resStep2Next" onclick="resGoToStep(3)" disabled>
+              <span data-i18n="res_next_details">Continue to Your Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /#resStep2 -->
+
+      <!-- ── STEP 3: Guest Details ───────────────────────────── -->
+      <div class="res-wizard-step" id="resStep3" hidden>
+        <div class="res-step3-summary" id="resStep3Summary"></div>
+        <div class="res-details-grid">
+          <div class="res-form-group">
+            <label class="res-label" for="resName" data-i18n="res_name">Full Name</label>
+            <input class="res-input" type="text" id="resName" placeholder="e.g. Sophie Chen" autocomplete="name">
+          </div>
+          <div class="res-form-group">
+            <label class="res-label" for="resPhone" data-i18n="res_phone">Phone</label>
+            <input class="res-input" type="tel" id="resPhone" placeholder="+60 12-345 6789" autocomplete="tel">
+          </div>
+          <div class="res-form-group res-form-full">
+            <label class="res-label" for="resEmail" data-i18n="res_email">Email (for confirmation)</label>
+            <input class="res-input" type="email" id="resEmail" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="res-form-group res-form-full">
+            <label class="res-label" for="resNote" data-i18n="res_note">Special Request</label>
+            <input class="res-input" type="text" id="resNote" placeholder="Window seat, dietary needs, anniversary setup...">
+          </div>
+        </div>
+
+        <div class="res-booking-summary" id="resBookingSummary"></div>
+
+        <div class="res-step-nav res-step-nav--between">
+          <button class="res-back-btn" onclick="resGoToStep(2)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-i18n="res_back">Back</span>
+          </button>
+          <button class="res-submit-btn" id="resSubmitBtn" onclick="submitReservation()" disabled data-i18n="res_confirm">
+            Confirm &amp; Pay Deposit →
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 4: Success ────────────────────────────────── -->
+      <div class="res-wizard-step" id="resSuccess" hidden>
+        <div class="res-success">
+          <div class="res-success-icon">✓</div>
+          <div class="res-success-title" data-i18n="res_success_title">Prenotazione Confermata!</div>
+          <p class="res-success-desc" data-i18n="res_success_desc">Your table is reserved. A confirmation has been sent to your email. We look forward to welcoming you.</p>
+          <div class="res-success-ref" id="resRef">Booking Ref: LI-00000</div>
+          <div class="res-success-details" id="resSuccessDetails"></div>
+          <button class="res-success-close btn-primary" onclick="closeOverlay('resOverlay')">Done</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─── GIFT CARDS OVERLAY ──────────────────────────────────── -->
+<div class="page-overlay" id="giftOverlay" role="dialog" aria-modal="true" aria-labelledby="giftModalTitle">
+  <div class="page-modal page-modal--gift">
+    <div class="page-modal-head">
+      <div>
+        <h2 class="page-modal-title" id="giftModalTitle" data-i18n="gift_title">Gift Cards</h2>
+        <div class="page-modal-sub" data-i18n="gift_sub">The perfect Italian gift — delivered digitally within minutes</div>
+      </div>
+      <button class="modal-close-btn" onclick="closeOverlay('giftOverlay')" aria-label="Close gift cards modal">✕</button>
+    </div>
+    <div class="page-modal-body">
+      <div class="gift-hero">
+        <div class="gift-hero-content">
+          <h3 data-i18n="gift_hero_title">Give the gift of <em style="color:var(--gold);font-style:italic">la dolce vita</em></h3>
+          <p data-i18n="gift_hero_desc">La Italiano gift cards are the perfect present for any occasion. Valid for 12 months, redeemable for dine-in, delivery and catering. Delivered instantly by email.</p>
+        </div>
+      </div>
+      <div class="section-label-heading" data-i18n="gift_choose">Choose Amount</div>
+      <div class="gift-cards-grid" id="giftDenomGrid"></div>
+      <div class="section-label-heading" data-i18n="gift_details">Recipient Details</div>
+      <div class="gift-form">
+        <div class="form-group">
+          <label class="form-label" for="giftToName" data-i18n="gift_to_name">Recipient Name</label>
+          <input class="form-input" type="text" id="giftToName" placeholder="Sophie Chen" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="giftToEmail" data-i18n="gift_to_email">Recipient Email</label>
+          <input class="form-input" type="email" id="giftToEmail" placeholder="sophie@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="giftFromName" data-i18n="gift_from">Your Name</label>
+          <input class="form-input" type="text" id="giftFromName" placeholder="James" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="giftPayEmail" data-i18n="gift_pay_email">Your Email</label>
+          <input class="form-input" type="email" id="giftPayEmail" placeholder="james@email.com" autocomplete="email">
+        </div>
+        <div class="form-group gift-form-full">
+          <label class="form-label" for="giftMsg" data-i18n="gift_msg">Personal Message</label>
+          <input class="form-input" type="text" id="giftMsg" placeholder="Buon compleanno! Enjoy a beautiful Italian dinner...">
+        </div>
+      </div>
+      <div class="gift-total-row">
+        <span class="gift-total-label" data-i18n="gift_total_label">Total to pay</span>
+        <span class="gift-total-amount stat-num" id="giftTotal">RM 0</span>
+      </div>
+      <button class="gift-submit" onclick="purchaseGift()" id="giftSubmitBtn" data-i18n="gift_buy">Purchase Gift Card →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CATERING OVERLAY ────────────────────────────────────── -->
+<div class="page-overlay" id="cateringOverlay" role="dialog" aria-modal="true" aria-labelledby="cateringModalTitle">
+  <div class="page-modal page-modal--catering">
+    <div class="page-modal-head">
+      <div>
+        <h2 class="page-modal-title" id="cateringModalTitle" data-i18n="cat_page_title">Catering by La Italiano</h2>
+        <div class="page-modal-sub" data-i18n="cat_page_sub">We bring authentic Italian to your event</div>
+      </div>
+      <button class="modal-close-btn" onclick="closeOverlay('cateringOverlay')" aria-label="Close catering modal">✕</button>
+    </div>
+    <div class="page-modal-body">
+      <div class="catering-hero">
+        <h3 data-i18n="cat_hero_title">Your event, our <em style="color:var(--gold);font-style:italic">cucina</em></h3>
+        <p data-i18n="cat_hero_desc">From intimate gatherings of 20 to grand events of 300+. Chef Marco and the La Italiano team bring handmade pasta stations, wood-fired pizza, and a full service front-of-house to your venue.</p>
+      </div>
+      <div class="section-label-heading" data-i18n="cat_choose_pkg">Choose Package</div>
+      <div class="catering-packages" id="cateringPkgGrid"></div>
+      <div class="section-label-heading" data-i18n="cat_enquiry">Send Enquiry</div>
+      <div class="catering-form">
+        <div class="form-group">
+          <label class="form-label" for="catName" data-i18n="field_name">Name</label>
+          <input class="form-input" type="text" id="catName" placeholder="Sophie Chen" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="catPhone" data-i18n="field_phone">Phone</label>
+          <input class="form-input" type="tel" id="catPhone" placeholder="+60 12-345 6789" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="catEventType" data-i18n="cat_event_type">Event Type</label>
+          <input class="form-input" type="text" id="catEventType" placeholder="Wedding, Corporate Dinner, Birthday...">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="catGuests" data-i18n="cat_guests_count">Expected Guests</label>
+          <input class="form-input" type="number" id="catGuests" placeholder="50" min="10">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="catDate" data-i18n="cat_event_date">Event Date</label>
+          <input class="form-input" type="date" id="catDate">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="catLocation" data-i18n="cat_location">Venue / Location</label>
+          <input class="form-input" type="text" id="catLocation" placeholder="KL Convention Centre...">
+        </div>
+        <div class="form-group catering-form-full">
+          <label class="form-label" for="catNotes" data-i18n="cat_notes">Additional Notes</label>
+          <input class="form-input" type="text" id="catNotes" placeholder="Dietary restrictions, theme, special requirements...">
+        </div>
+      </div>
+      <button class="catering-submit" onclick="submitCatering()" data-i18n="cat_submit">Send Enquiry →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── BUSINESS LUNCH MODAL ──────────────────────────────────── -->
+<div class="lunch-overlay" id="lunchOverlay" role="dialog" aria-modal="true" aria-labelledby="lunchModalTitle">
+  <div class="lunch-modal">
+    <div class="lunch-modal-head">
+      <div>
+        <h2 class="lunch-modal-title" id="lunchModalTitle">Business Lunch Set</h2>
+        <div class="lunch-modal-sub">Choose 1 main · 1 drink · 1 dessert — RM 68 for two</div>
+      </div>
+      <button class="modal-close-btn" onclick="closeLunchModal()" aria-label="Close lunch set modal">✕</button>
+    </div>
+    <div class="lunch-modal-body">
+      <!-- Summary bar -->
+      <div class="lunch-summary" id="lunchSummary">
+        <div class="lunch-summary-slot">
+          <span class="lunch-summary-label">Main Course</span>
+          <span class="lunch-summary-val empty" id="lunchMainVal">Not selected</span>
+        </div>
+        <div class="lunch-summary-slot">
+          <span class="lunch-summary-label">Drink</span>
+          <span class="lunch-summary-val empty" id="lunchDrinkVal">Not selected</span>
+        </div>
+        <div class="lunch-summary-slot">
+          <span class="lunch-summary-label">Dessert</span>
+          <span class="lunch-summary-val empty" id="lunchDessertVal">Not selected</span>
+        </div>
+      </div>
+      <div class="lunch-step-header"><span class="lunch-step-num">1</span> Choose your main course</div>
+      <div class="lunch-items-grid" id="lunchMainGrid"></div>
+      <div class="lunch-step-header"><span class="lunch-step-num">2</span> Choose your drink</div>
+      <div class="lunch-items-grid" id="lunchDrinkGrid"></div>
+      <div class="lunch-step-header"><span class="lunch-step-num">3</span> Choose your dessert</div>
+      <div class="lunch-items-grid" id="lunchDessertGrid"></div>
+      <div class="lunch-price-row">
+        <span style="font-size:0.8rem;color:var(--text-sub)">Set price (for two)</span>
+        <span class="lunch-total">RM 68</span>
+      </div>
+      <button class="lunch-confirm-btn" id="lunchConfirmBtn" onclick="confirmLunch()" disabled>Add Lunch Set to Cart →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()" aria-hidden="true"></div>
+<div class="cart-sidebar" id="cartSidebar" role="complementary" aria-label="Shopping cart">
+  <div class="cart-head">
+    <span class="cart-title" data-i18n="cart_title">Your Order</span>
+    <button class="cart-close" onclick="toggleCart()" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="promo-row">
+      <label for="promoInput" class="visually-hidden">Promo code</label>
+      <input class="promo-input" id="promoInput" placeholder="PASTA20" type="text" aria-label="Enter promo code">
+      <button class="promo-btn" onclick="applyPromo()" data-i18n="promo_btn">Apply</button>
+    </div>
+    <div class="cart-totals" id="cartTotals"></div>
+    <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()" disabled data-i18n="checkout_btn">Checkout →</button>
+  </div>
+</div>
+
+<!-- ORDER CHECKOUT MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+  <div class="modal">
+    <div id="checkoutForm">
+      <div class="modal-head">
+        <h2 class="modal-title" id="checkoutModalTitle" data-i18n="checkout_title">Checkout</h2>
+        <button class="cart-close" onclick="closeCheckout()" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-section">
+          <div class="form-section-title" data-i18n="delivery_method">Delivery Method</div>
+          <div class="delivery-options">
+            <div class="delivery-opt selected" onclick="selectDelivery(this,'delivery')" role="radio" aria-checked="true" tabindex="0"><span class="d-icon">🛵</span><span data-i18n="opt_delivery">Delivery</span></div>
+            <div class="delivery-opt" onclick="selectDelivery(this,'pickup')" role="radio" aria-checked="false" tabindex="0"><span class="d-icon">🏠</span><span data-i18n="opt_pickup">Pickup</span></div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title" data-i18n="your_details">Your Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="checkoutName" data-i18n="field_name">Name</label>
+              <input class="form-input" id="checkoutName" placeholder="Sophie" type="text" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="checkoutPhone" data-i18n="field_phone">Phone</label>
+              <input class="form-input" id="checkoutPhone" placeholder="+60 12-345 6789" type="tel" autocomplete="tel">
+            </div>
+          </div>
+        </div>
+        <div class="form-section" id="addressSection">
+          <div class="form-section-title" data-i18n="delivery_address">Delivery Address</div>
+          <div class="form-group">
+            <label class="form-label" for="checkoutStreet" data-i18n="field_street">Street &amp; Number</label>
+            <input class="form-input" id="checkoutStreet" placeholder="e.g. Jalan Bukit Bintang, 168" type="text" autocomplete="street-address">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="checkoutUnit" data-i18n="field_unit">Unit</label>
+              <input class="form-input" id="checkoutUnit" placeholder="B-12" type="text" autocomplete="address-line2">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="checkoutTime" data-i18n="field_time">Delivery Time</label>
+              <input class="form-input" id="checkoutTime" value="As soon as possible" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title" data-i18n="field_note">Special Instructions</div>
+          <div class="form-group">
+            <label class="form-label visually-hidden" for="checkoutNote">Special instructions</label>
+            <input class="form-input" id="checkoutNote" placeholder="No onions, nut allergy..." type="text">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="order-summary"><span data-i18n="total_label">Total to pay</span><strong id="modalTotal">RM 0</strong></div>
+        <button class="place-btn" onclick="placeOrder()">✦ <span data-i18n="place_order">Confirm Order</span> ✦</button>
+      </div>
+    </div>
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">✓</div>
+      <div class="success-title" data-i18n="success_title">Grazie mille!</div>
+      <p class="success-desc" data-i18n="success_desc">Your order is confirmed. We're already firing up the wood oven for your pasta.</p>
+      <div class="success-time" data-i18n="success_time">⏱ Estimated delivery: 35–45 minutes</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bottom-bar" id="mobileBottomBar">
+  <button class="mbb-item" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <span>Menu</span>
+  </button>
+  <button class="mbb-item mbb-reserve" onclick="openReservation()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Reserve</span>
+  </button>
+  <button class="mbb-item mbb-cart" onclick="toggleCart()" aria-label="Open cart">
+    <div class="mbb-cart-inner">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="mbb-badge" id="mbbBadge">0</span>
+    </div>
+    <span>Cart</span>
+  </button>
+  <a class="mbb-item" href="tel:+60321234567">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63 19.79 19.79 0 01.14 1 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+    <span>Call</span>
+  </a>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
