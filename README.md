@@ -2,7 +2,7 @@
 
 Restaurant website built as a personal project. No frameworks, no build tools — just HTML, CSS and JavaScript.
 
-Live: **[la-italiano-restaurant](https://azatkabulov.github.io/la-italiano-restaurant)**
+Live: **[la-italiano.netlify.app](https://la-italiano.netlify.app)**
 
 ---
 
